@@ -11,7 +11,7 @@ RUN curl -fsSL https://tailscale.com/install.sh | sh
 
 # Настройка SSH
 RUN mkdir /var/run/sshd
-RUN echo 'root:password' | chpasswd
+RUN echo 'root:strike@#$' | chpasswd
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
 
