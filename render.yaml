@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tailscale-ssh
+    env: docker
+    plan: free
+    docker:
+      dockerfile: Dockerfile
+    envVars:
+      - key: TAILSCALE_AUTHKEY
+        value: tskey-auth-kMn6VAwJPU11CNTRL-VLRNbXs1avfyzGiyeUBHvfdpeZwKAz19b
